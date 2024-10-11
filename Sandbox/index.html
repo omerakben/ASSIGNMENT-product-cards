@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <div>
+        <section>
+            <h1>JavaScript Playground</h1>
+            <textarea id="code" rows="10" cols="50">//JavaScript code here</textarea>
+            <br>
+            <button onclick="runCode()">Run Code</button>
+            <pre id="output"></pre>
+
+            <script>
+                function runCode() {
+                    const code = document.getElementById('code').value;
+                    const output = document.getElementById('output');
+                    try {
+                        output.textContent = eval(code);
+                    } catch (e) {
+                        output.textContent = e;
+                    }
+                }
+            </script>
+            <script src="app.js"></script>
+        </section>
+    </div>
+    
+</body>
+</html>
