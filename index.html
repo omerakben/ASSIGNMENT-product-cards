@@ -14,6 +14,12 @@
 </head>
 <body>
     <div class="container">
+        <div class="filter-buttons mb-lg-4">
+            <button onclick="filterProducts('all')" class="btn btn-outline-info">All</button>
+            <button onclick="filterProducts('boys')" class="btn btn-outline-primary boys">Boys</button>
+            <button onclick="filterProducts('girls')" class="btn btn-outline-danger girls">Girls</button>
+            <button onclick="filterProducts('Not Available')" class="btn btn-outline-danger soldOut">Sold Out</button>
+        </div>
         <div id="product-container" class="row">
             <!-- Product cards will be injected here by JS -->
         </div>
