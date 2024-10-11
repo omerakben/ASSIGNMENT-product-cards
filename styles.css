@@ -10,6 +10,25 @@ body {
     padding: 0;
 }
 
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.boys{
+    background-color: #00c4fa;
+    color: white;
+}
+.girls{
+    background-color: #E26A89;
+    color: white;
+}
+.soldOut {
+    color: #ff0000a1;
+    padding: 20px;
+}
+
 /* Container padding */
 .container {
     padding: 20px;

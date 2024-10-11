@@ -1,3 +1,4 @@
+// Function to create HTML for each product
 function createProductHTML(product) {
   return `
     <div class="col-md-4 mb-4">
@@ -29,19 +30,29 @@ function createProductHTML(product) {
   `;
 }
 
-// Render
-function renderProducts() {
-  const container = document.getElementById("product-container");
-  container.innerHTML = products.map(createProductHTML).join('');
+// Function to filter products by category
+function filterProducts(category) {
+  const filteredProducts = category === 'all'
+    ? products
+    : category === 'Not Available'
+      ? products.filter(product => product.availability === "Not Available")
+      : products.filter(product => product.category === category);
+
+  renderProducts(filteredProducts);
 }
 
-// Call the render function
-document.addEventListener("DOMContentLoaded", renderProducts);
+// Function to render products in the container
+function renderProducts(filteredProducts = products) {
+  const container = document.getElementById("product-container");
+  container.innerHTML = filteredProducts.map(createProductHTML).join('');
+}
 
-// Click event listener
+// Initial render of all products when the page loads
+document.addEventListener("DOMContentLoaded", () => filterProducts('all'));
+
+// Click event listener for Buy Now button
 document.addEventListener("click", function (event) {
   if (event.target.matches(".btn.btn-primary")) {
     alert("Thank you for your purchase!");
   }
 });
-
