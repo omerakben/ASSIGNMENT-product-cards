@@ -1,0 +1,157 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container padding */
+.container {
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(0, 197, 251, 0.664);
+}
+
+/* Card Header */
+.card-header {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Card Image */
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.card-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Sold-out overlay image */
+.sold-out-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.5) translate(-100%, -100%);
+    width: 80%;
+    height: auto;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px;
+}
+
+/* Text styling */
+.text-justify {
+    text-align: justify;
+}
+
+/* Availability styling */
+.availability {
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.availability-available {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.availability-not-available {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Specs and Pricing */
+.specs h5, .pricing h5 {
+    color: #3498db;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.specs p, .pricing p {
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 8px #2ecc71;
+}
+
+/* Card Footer */
+.card-footer {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1em;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .specs h5, .pricing h5 {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
